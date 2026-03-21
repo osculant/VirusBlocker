@@ -1,0 +1,661 @@
+ <!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>VirusBlocker™ - Antivirus & Anti-Malware Software | Official India Site</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Roboto:wght@500;700&display=swap');
+        
+        :root {
+            --VirusBlocker-orange: #FF4F00;
+        }
+        
+        .tail-container {
+            font-family: 'Inter', system-ui, sans-serif;
+        }
+        
+        .VirusBlocker-header {
+            transition: all 0.3s ease;
+        }
+        
+        .hero-bg {
+            background: linear-gradient(rgba(10, 37, 64, 0.85), rgba(10, 37, 64, 0.95)), 
+                        url('https://picsum.photos/id/1015/1920/1080') center/cover no-repeat;
+        }
+        
+        .plan-card {
+            transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+        
+        .plan-card:hover {
+            transform: translateY(-12px);
+            box-shadow: 0 25px 50px -12px rgb(255 79 0 / 0.25);
+        }
+        
+        .best-deal {
+            position: relative;
+        }
+        
+        .best-deal::before {
+            content: "BEST DEAL";
+            position: absolute;
+            top: -12px;
+            left: 50%;
+            transform: translateX(-50%);
+            background: #FF4F00;
+            color: white;
+            font-size: 12px;
+            font-weight: 700;
+            letter-spacing: 1px;
+            padding: 4px 24px;
+            border-radius: 9999px;
+            box-shadow: 0 10px 15px -3px rgb(255 79 0 / 0.3);
+        }
+        
+        .nav-link {
+            position: relative;
+        }
+        
+        .nav-link:after {
+            content: '';
+            position: absolute;
+            width: 0;
+            height: 2px;
+            bottom: -2px;
+            left: 0;
+            background-color: #FF4F00;
+            transition: all 0.3s ease;
+        }
+        
+        .nav-link:hover:after {
+            width: 100%;
+        }
+        
+        .feature-icon {
+            transition: all 0.3s ease;
+        }
+        
+        .mobile-menu {
+            animation: slideDown 0.4s ease forwards;
+        }
+        
+        @keyframes slideDown {
+            from { opacity: 0; transform: translateY(-20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        /* Extra mobile improvements */
+        @media (max-width: 640px) {
+            .best-deal::before {
+                font-size: 10px;
+                padding: 3px 16px;
+                top: -10px;
+            }
+            h1 { font-size: 2.5rem; line-height: 1.1; }
+            h2 { font-size: 2.25rem; }
+        }
+
+        @media (max-width: 400px) {
+            .max-w-7xl { padding-left: 1rem; padding-right: 1rem; }
+            .text-5xl { font-size: 2.5rem; }
+            .text-6xl { font-size: 3rem; }
+            button, a { min-height: 44px; }
+        }
+    </style>
+</head>
+<body class="tail-container text-neutral-900 overflow-x-hidden">
+
+    <!-- TOP BAR -->
+    <div class="bg-[#0A2540] text-white text-xs py-2 text-center flex items-center justify-center gap-2">
+        <i class="fa-solid fa-shield-halved"></i>
+        <span class="font-medium">VirusBlocker technology blocks thousands of threats every minute</span>
+    </div>
+
+    <!-- HEADER / NAV -->
+    <header id="header" class="VirusBlocker-header bg-white shadow-md sticky top-0 z-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6">
+            <div class="flex items-center justify-between h-16 sm:h-20">
+                <!-- Logo -->
+                <div class="flex items-center gap-x-2 sm:gap-x-3">
+                    <div class="w-9 h-9 sm:w-10 sm:h-10 bg-[#FF4F00] rounded-xl flex items-center justify-center text-white font-black text-2xl sm:text-3xl leading-none pt-1">N</div>
+                    <div>
+                        <span class="font-bold text-2xl sm:text-3xl tracking-tighter text-[#0A2540]">VirusBlocker</span>
+                        <span class="text-[#FF4F00] text-xs font-bold tracking-[2px] block -mt-1">™</span>
+                    </div>
+                </div>
+
+                <!-- Desktop Menu -->
+                <nav class="hidden md:flex items-center gap-x-6 lg:gap-x-8 text-sm font-medium">
+                    <a href="#" onclick="scrollToSection('plans')" class="nav-link text-[#0A2540]">VirusBlocker Plans</a>
+                    <a href="Product.html" class="nav-link text-[#0A2540]">Products</a>
+                    <a href="Service.html" class="nav-link text-[#0A2540]">Services</a>
+                    <a href="#" class="nav-link text-[#0A2540]">Support</a>
+                    <a href="#" class="nav-link text-[#0A2540]">For Business</a>
+                </nav>
+
+                <div class="flex items-center gap-x-4 sm:gap-x-5">
+                    <a href="#" class="hidden sm:flex items-center gap-x-2 text-sm font-semibold text-[#0A2540] hover:text-[#FF4F00]">
+                        <i class="fa-solid fa-circle-user text-xl"></i>
+                        <span>My Account</span>
+                    </a>
+
+                    <div class="hidden md:flex items-center gap-x-1 text-xs font-medium cursor-pointer">
+                        <span class="text-[#FF4F00]">IN</span>
+                        <i class="fa-solid fa-chevron-down text-[10px]"></i>
+                    </div>
+
+                    <!-- CTA -->
+                    <button onclick="showPromoModal()" 
+                            class="bg-[#FF4F00] hover:bg-orange-600 text-white px-5 sm:px-8 py-3 sm:py-3.5 rounded-2xl text-sm sm:text-base font-semibold flex items-center gap-x-2 transition-all active:scale-95">
+                        <i class="fa-solid fa-cart-shopping"></i>
+                        BUY NOW
+                    </button>
+
+                    <!-- Mobile Hamburger -->
+                    <button id="mobile-menu-btn" class="md:hidden text-2xl sm:text-3xl text-[#0A2540]">
+                        <i class="fa-solid fa-bars"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+
+        <!-- MOBILE MENU -->
+        <div id="mobile-menu" class="hidden md:hidden bg-white border-t shadow-xl mobile-menu">
+            <div class="px-5 sm:px-6 py-8 flex flex-col gap-y-5 sm:gap-y-6 text-lg font-medium">
+                <a href="#" onclick="toggleMobileMenu()" class="nav-link">VirusBlocker Plans</a>
+                <a href="Product.html" onclick="toggleMobileMenu()" class="nav-link">Products</a>
+                <a href="Service.html" onclick="toggleMobileMenu()" class="nav-link">Services</a>
+                <a href="#" onclick="toggleMobileMenu()" class="nav-link">Support</a>
+                <a href="#" onclick="toggleMobileMenu()" class="nav-link">For Business</a>
+                <a href="#" onclick="toggleMobileMenu()" class="flex items-center gap-x-3 text-[#FF4F00]">
+                    <i class="fa-solid fa-circle-user"></i>
+                    <span>My Account</span>
+                </a>
+                <button onclick="toggleMobileMenu();showPromoModal()" 
+                        class="w-full bg-[#FF4F00] text-white py-5 rounded-3xl font-bold text-lg mt-4">
+                    BUY NOW
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <!-- HERO SECTION -->
+    <section class="hero-bg min-h-screen flex items-center text-white relative">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 py-16 sm:py-0 grid md:grid-cols-2 gap-10 sm:gap-12 items-center">
+            <!-- Left Content -->
+            <div class="space-y-6 sm:space-y-8">
+                <div class="inline-flex items-center gap-x-3 bg-white/10 backdrop-blur-md px-5 sm:px-6 py-2.5 sm:py-3 rounded-3xl text-xs sm:text-sm font-semibold">
+                    <i class="fa-solid fa-shield-halved text-[#FF4F00]"></i>
+                    <span>Trusted by millions of customers</span>
+                </div>
+                
+                <h1 class="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold leading-tight md:leading-none tracking-tighter">
+                    Get the protection<br>you and your family<br>need in one place.
+                </h1>
+                
+                <p class="text-lg sm:text-xl max-w-lg text-neutral-200">
+                    VirusBlocker 360 blocks viruses, malware, ransomware, and more — with 100% Virus Protection Promise.
+                </p>
+                
+                <div class="flex flex-col sm:flex-row flex-wrap gap-4">
+                    <button onclick="scrollToSection('plans')" 
+                            class="bg-[#FF4F00] hover:bg-orange-600 text-white px-8 sm:px-10 py-5 sm:py-6 rounded-3xl text-lg sm:text-xl font-semibold flex items-center justify-center gap-x-3 transition-all">
+                        SEE PLANS
+                        <i class="fa-solid fa-arrow-right"></i>
+                    </button>
+                    
+                    <button onclick="showPromoModal()" 
+                            class="border-2 border-white/70 hover:border-white text-white px-8 sm:px-10 py-5 sm:py-6 rounded-3xl text-lg sm:text-xl font-semibold transition-all">
+                        Apply Promo Code
+                    </button>
+                </div>
+                
+                <div class="flex items-center gap-x-6 sm:gap-x-8 text-xs sm:text-sm">
+                    <div class="flex -space-x-3 sm:-space-x-4">
+                        <div class="w-7 h-7 sm:w-8 sm:h-8 bg-white rounded-full border-2 border-[#0A2540] flex items-center justify-center text-xs font-bold">✓</div>
+                        <div class="w-7 h-7 sm:w-8 sm:h-8 bg-white rounded-full border-2 border-[#0A2540] flex items-center justify-center text-xs font-bold">✓</div>
+                    </div>
+                    <div>
+                        <div class="text-[#FF4F00] text-xs tracking-widest font-bold">100% VIRUS PROTECTION PROMISE</div>
+                        <div class="text-neutral-300 text-xs">If we can't remove a virus, you get your money back</div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Right Visual (hidden on mobile) -->
+            <div class="hidden md:flex justify-end relative">
+                <div class="relative">
+                    <div class="bg-white rounded-3xl shadow-2xl p-4 w-[340px] lg:w-[380px]">
+                        <div class="bg-neutral-900 rounded-2xl p-3">
+                            <img src="https://picsum.photos/id/1016/600/380" 
+                                 class="rounded-xl shadow-inner" alt="VirusBlocker protected device">
+                        </div>
+                    </div>
+                    
+                    <div class="absolute -top-8 -right-8 bg-white text-[#0A2540] w-28 h-28 sm:w-32 sm:h-32 rounded-3xl shadow-2xl flex flex-col items-center justify-center">
+                        <i class="fa-solid fa-shield-halved text-6xl sm:text-7xl text-[#FF4F00]"></i>
+                        <div class="text-xs font-bold tracking-widest mt-2">PROTECTED</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Scroll indicator -->
+        <div class="absolute bottom-8 sm:bottom-10 left-1/2 flex flex-col items-center text-white/60 text-xs">
+            <span class="tracking-widest">SCROLL</span>
+            <i class="fa-solid fa-chevron-down animate-bounce mt-2"></i>
+        </div>
+        
+        <!-- Trust bar -->
+        <div class="absolute bottom-0 left-0 right-0 bg-white/10 backdrop-blur-md py-3 sm:py-4">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 flex flex-wrap justify-center gap-x-6 sm:gap-x-10 gap-y-3 sm:gap-y-4 text-xs sm:text-sm items-center">
+                <div class="flex items-center gap-x-2"><i class="fa-solid fa-check text-[#FF4F00]"></i> <span>24/7 Support</span></div>
+                <div class="flex items-center gap-x-2"><i class="fa-solid fa-check text-[#FF4F00]"></i> <span>Dark Web Monitoring</span></div>
+                <div class="flex items-center gap-x-2"><i class="fa-solid fa-check text-[#FF4F00]"></i> <span>Unlimited VPN</span></div>
+                <div class="flex items-center gap-x-2"><i class="fa-solid fa-check text-[#FF4F00]"></i> <span>Parental Controls</span></div>
+            </div>
+        </div>
+    </section>
+
+    <!-- PLANS SECTION -->
+    <section id="plans" class="py-16 sm:py-24 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6">
+            <div class="text-center mb-12 sm:mb-16">
+                <div class="inline-flex items-center gap-x-2 bg-orange-100 text-[#FF4F00] px-5 sm:px-6 py-2 rounded-3xl text-xs sm:text-sm font-semibold mb-4">
+                    <i class="fa-solid fa-fire"></i>
+                    LIMITED TIME OFFER
+                </div>
+                <h2 class="text-4xl sm:text-5xl font-bold text-[#0A2540]">Choose Your VirusBlocker Plan</h2>
+                <p class="text-lg sm:text-xl text-neutral-600 mt-4 max-w-md mx-auto">Protection for every device. One subscription. Total peace of mind.</p>
+            </div>
+            
+            <!-- Yearly / Monthly Toggle -->
+            <div class="flex justify-center mb-10 sm:mb-12">
+                <div onclick="togglePricing(this)" id="pricing-toggle"
+                     class="inline-flex bg-neutral-100 rounded-3xl p-1 cursor-pointer">
+                    <div class="pricing-btn active px-6 sm:px-8 py-2.5 sm:py-3 rounded-3xl text-xs sm:text-sm font-semibold">1 Year</div>
+                    <div class="pricing-btn px-6 sm:px-8 py-2.5 sm:py-3 rounded-3xl text-xs sm:text-sm font-semibold">2 Years - Save 50%</div>
+                </div>
+            </div>
+            
+            <div class="grid sm:grid-cols-2 md:grid-cols-3 gap-6 sm:gap-8">
+                <!-- Plan 1 -->
+                <div class="plan-card bg-white border border-neutral-200 rounded-3xl p-6 sm:p-8 flex flex-col">
+                    <div class="flex justify-between items-start">
+                        <div>
+                            <div class="text-xs sm:text-sm font-medium text-neutral-500">1 Device</div>
+                            <div class="text-2xl sm:text-3xl font-bold text-[#0A2540] mt-1">VirusBlocker 360 Standard</div>
+                        </div>
+                        <div class="text-right">
+                            <div class="text-xs text-neutral-400">Starting at</div>
+                            <div class="text-4xl sm:text-5xl font-bold text-[#FF4F00]" id="plan1-price">$1,499</div>
+                            <div class="text-xs text-neutral-500">/year</div>
+                        </div>
+                    </div>
+                    
+                    <ul class="mt-6 sm:mt-8 space-y-3 sm:space-y-4 text-sm sm:text-base flex-1">
+                        <li class="flex items-start gap-x-3"><i class="fa-solid fa-check text-[#FF4F00] mt-1"></i> Antivirus + Anti-Malware</li>
+                        <li class="flex items-start gap-x-3"><i class="fa-solid fa-check text-[#FF4F00] mt-1"></i> Scam Protection</li>
+                        <li class="flex items-start gap-x-3"><i class="fa-solid fa-check text-[#FF4F00] mt-1"></i> 10 GB Cloud Backup</li>
+                        <li class="flex items-start gap-x-3"><i class="fa-solid fa-check text-[#FF4F00] mt-1"></i> Password Manager</li>
+                    </ul>
+                    
+                    <button onclick="alert('Redirecting to checkout... (demo)')" 
+                            class="mt-6 sm:mt-auto w-full bg-neutral-900 hover:bg-black text-white py-5 sm:py-6 rounded-3xl font-semibold text-base sm:text-lg">
+                        Get Standard
+                    </button>
+                </div>
+                
+                <!-- BEST DEAL -->
+                <div class="plan-card best-deal bg-white border-2 border-[#FF4F00] rounded-3xl p-6 sm:p-8 flex flex-col relative scale-100 sm:scale-105 shadow-2xl">
+                    <div class="text-center">
+                        <div class="text-xs sm:text-sm font-medium text-[#FF4F00]">3 Devices</div>
+                        <div class="text-2xl sm:text-3xl font-bold text-[#0A2540]">VirusBlocker 360 Deluxe</div>
+                    </div>
+                    
+                    <div class="text-center mt-6 sm:mt-8">
+                        <div class="text-xs text-neutral-400">Most Popular</div>
+                        <div class="text-5xl sm:text-6xl font-bold text-[#FF4F00]" id="plan2-price">$2,999</div>
+                        <div class="text-xs text-neutral-500">/year • Save $1,500</div>
+                    </div>
+                    
+                    <ul class="mt-6 sm:mt-8 space-y-3 sm:space-y-4 text-sm sm:text-base flex-1">
+                        <li class="flex items-start gap-x-3"><i class="fa-solid fa-check text-[#FF4F00] mt-1"></i> Antivirus, Malware & Ransomware</li>
+                        <li class="flex items-start gap-x-3"><i class="fa-solid fa-check text-[#FF4F00] mt-1"></i> Unlimited VPN</li>
+                        <li class="flex items-start gap-x-3"><i class="fa-solid fa-check text-[#FF4F00] mt-1"></i> Dark Web Monitoring</li>
+                        <li class="flex items-start gap-x-3"><i class="fa-solid fa-check text-[#FF4F00] mt-1"></i> Parental Controls</li>
+                        <li class="flex items-start gap-x-3"><i class="fa-solid fa-check text-[#FF4F00] mt-1"></i> Deepfake Protection</li>
+                    </ul>
+                    
+                    <button onclick="alert('Redirecting to checkout... (demo)')" 
+                            class="mt-6 sm:mt-auto w-full bg-[#FF4F00] hover:bg-orange-600 text-white py-5 sm:py-6 rounded-3xl font-semibold text-base sm:text-lg">
+                        Get Best Deal
+                    </button>
+                </div>
+                
+                <!-- Plan 3 -->
+                <div class="plan-card bg-white border border-neutral-200 rounded-3xl p-6 sm:p-8 flex flex-col">
+                    <div class="flex justify-between items-start">
+                        <div>
+                            <div class="text-xs sm:text-sm font-medium text-neutral-500">5+ Devices</div>
+                            <div class="text-2xl sm:text-3xl font-bold text-[#0A2540] mt-1">VirusBlocker 360 Premium</div>
+                        </div>
+                        <div class="text-right">
+                            <div class="text-xs text-neutral-400">Starting at</div>
+                            <div class="text-4xl sm:text-5xl font-bold text-[#FF4F00]" id="plan3-price">$4,499</div>
+                            <div class="text-xs text-neutral-500">/year</div>
+                        </div>
+                    </div>
+                    
+                    <ul class="mt-6 sm:mt-8 space-y-3 sm:space-y-4 text-sm sm:text-base flex-1">
+                        <li class="flex items-start gap-x-3"><i class="fa-solid fa-check text-[#FF4F00] mt-1"></i> Everything in Deluxe +</li>
+                        <li class="flex items-start gap-x-3"><i class="fa-solid fa-check text-[#FF4F00] mt-1"></i> 50 GB Cloud Backup</li>
+                        <li class="flex items-start gap-x-3"><i class="fa-solid fa-check text-[#FF4F00] mt-1"></i> VirusBlocker Family Parental Control</li>
+                        <li class="flex items-start gap-x-3"><i class="fa-solid fa-check text-[#FF4F00] mt-1"></i> Priority Support</li>
+                    </ul>
+                    
+                    <button onclick="alert('Redirecting to checkout... (demo)')" 
+                            class="mt-6 sm:mt-auto w-full bg-neutral-900 hover:bg-black text-white py-5 sm:py-6 rounded-3xl font-semibold text-base sm:text-lg">
+                        Get Premium
+                    </button>
+                </div>
+            </div>
+            
+            <div class="text-center text-xs text-neutral-400 mt-8">* Prices shown are for 1-year subscription. Auto-renews. Cancel anytime.</div>
+        </div>
+    </section>
+
+    <!-- FEATURES SECTION -->
+    <section id="features" class="bg-[#0A2540] text-white py-16 sm:py-24">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6">
+            <div class="grid md:grid-cols-12 gap-10 sm:gap-16">
+                <!-- Left -->
+                <div class="md:col-span-5">
+                    <div class="sticky top-20 sm:top-28">
+                        <div class="text-[#FF4F00] text-xs sm:text-sm font-bold tracking-widest">POWERFUL PROTECTION</div>
+                        <h2 class="text-4xl sm:text-5xl font-bold leading-tight mt-4">Everything you need<br>in one subscription</h2>
+                        <p class="mt-6 sm:mt-8 text-neutral-300 text-base sm:text-lg">VirusBlocker 360 delivers award-winning antivirus, VPN, password manager, and more — all in one easy-to-use app.</p>
+                        
+                        <div class="mt-8 sm:mt-12 flex items-center gap-x-4 text-xs sm:text-sm">
+                            <div class="flex items-center gap-x-2">
+                                <i class="fa-solid fa-star text-[#FF4F00]"></i>
+                                <span class="font-medium">4.8/5</span>
+                            </div>
+                            <div class="h-px w-10 bg-neutral-700"></div>
+                            <span class="text-neutral-400">From 12,458 reviews</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Right Grid -->
+                <div class="md:col-span-7 grid grid-cols-1 sm:grid-cols-2 gap-6 sm:gap-8">
+                    <div class="feature-icon bg-white/5 hover:bg-white/10 transition-all p-6 sm:p-8 rounded-3xl border border-white/10">
+                        <i class="fa-solid fa-bug-slash text-4xl sm:text-5xl text-[#FF4F00]"></i>
+                        <div class="mt-6 sm:mt-8 font-semibold text-xl sm:text-2xl">Real-Time Antivirus</div>
+                        <div class="text-neutral-300 mt-2 sm:mt-3 text-sm sm:text-base">Blocks viruses, malware, ransomware & hacking attempts instantly.</div>
+                    </div>
+                    
+                    <div class="feature-icon bg-white/5 hover:bg-white/10 transition-all p-6 sm:p-8 rounded-3xl border border-white/10">
+                        <i class="fa-solid fa-lock text-4xl sm:text-5xl text-[#FF4F00]"></i>
+                        <div class="mt-6 sm:mt-8 font-semibold text-xl sm:text-2xl">Unlimited VPN</div>
+                        <div class="text-neutral-300 mt-2 sm:mt-3 text-sm sm:text-base">Secure & private browsing on public Wi-Fi. No data limits.</div>
+                    </div>
+                    
+                    <div class="feature-icon bg-white/5 hover:bg-white/10 transition-all p-6 sm:p-8 rounded-3xl border border-white/10">
+                        <i class="fa-solid fa-key text-4xl sm:text-5xl text-[#FF4F00]"></i>
+                        <div class="mt-6 sm:mt-8 font-semibold text-xl sm:text-2xl">Password Manager</div>
+                        <div class="text-neutral-300 mt-2 sm:mt-3 text-sm sm:text-base">Securely store & autofill passwords across all devices.</div>
+                    </div>
+                    
+                    <div class="feature-icon bg-white/5 hover:bg-white/10 transition-all p-6 sm:p-8 rounded-3xl border border-white/10">
+                        <i class="fa-solid fa-eye-slash text-4xl sm:text-5xl text-[#FF4F00]"></i>
+                        <div class="mt-6 sm:mt-8 font-semibold text-xl sm:text-2xl">Dark Web Monitoring</div>
+                        <div class="text-neutral-300 mt-2 sm:mt-3 text-sm sm:text-base">Alerts you if your personal info is found on the dark web.</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- PROMO BANNER -->
+    <div class="bg-gradient-to-r from-[#FF4F00] to-orange-600 py-6 text-white">
+        <div class="max-w-4xl mx-auto text-center px-4 sm:px-6 flex flex-col sm:flex-row items-center justify-center gap-x-6 sm:gap-x-8 gap-y-4">
+            <span class="font-semibold text-base sm:text-lg">Have a promo code?</span>
+            <button onclick="showPromoModal()" 
+                    class="bg-white text-[#FF4F00] px-8 sm:px-10 py-4 rounded-3xl font-bold hover:shadow-xl transition-all">
+                APPLY PROMO CODE →
+            </button>
+        </div>
+    </div>
+
+    <!-- CONTACT SECTION -->
+    <section id="contact" class="py-16 sm:py-24 bg-white">
+        <div class="max-w-5xl mx-auto px-4 sm:px-6">
+            <div class="text-center mb-12 sm:mb-16">
+                <h2 class="text-4xl sm:text-5xl font-bold text-[#0A2540]">Contact Us</h2>
+                <p class="text-lg sm:text-xl text-neutral-600 mt-4">Have a question or need help? We're here for you.</p>
+            </div>
+
+            <div class="bg-white border border-neutral-200 rounded-3xl shadow-xl p-6 sm:p-10 md:p-12 max-w-3xl mx-auto">
+                <form id="contact-form" class="space-y-6 sm:space-y-8">
+                    <div>
+                        <label for="name" class="block text-sm font-medium text-neutral-700 mb-2">Full Name</label>
+                        <input type="text" id="name" required 
+                               class="w-full px-4 sm:px-5 py-3.5 sm:py-4 border border-neutral-300 rounded-2xl focus:outline-none focus:border-[#FF4F00] focus:ring-1 focus:ring-[#FF4F00] text-base sm:text-lg placeholder-neutral-400"
+                               placeholder="Your full name">
+                    </div>
+
+                    <div>
+                        <label for="email" class="block text-sm font-medium text-neutral-700 mb-2">Email Address</label>
+                        <input type="email" id="email" required 
+                               class="w-full px-4 sm:px-5 py-3.5 sm:py-4 border border-neutral-300 rounded-2xl focus:outline-none focus:border-[#FF4F00] focus:ring-1 focus:ring-[#FF4F00] text-base sm:text-lg placeholder-neutral-400"
+                               placeholder="your.email@example.com">
+                    </div>
+
+                    <div>
+                        <label for="antivirus" class="block text-sm font-medium text-neutral-700 mb-2">Antivirus / Product Type</label>
+                        <select id="antivirus" required 
+                                class="w-full px-4 sm:px-5 py-3.5 sm:py-4 border border-neutral-300 rounded-2xl focus:outline-none focus:border-[#FF4F00] focus:ring-1 focus:ring-[#FF4F00] text-base sm:text-lg bg-white">
+                            <option value="">Select your product</option>
+                            <option value="360-standard">VirusBlocker 360 Standard</option>
+                            <option value="360-deluxe">VirusBlocker 360 Deluxe</option>
+                            <option value="360-premium">VirusBlocker 360 Premium</option>
+                            <option value="antivirus-plus">VirusBlocker AntiVirus Plus</option>
+                            <option value="vpn">VirusBlocker Secure VPN</option>
+                            <option value="other">Other / Not sure</option>
+                        </select>
+                    </div>
+
+                    <div>
+                        <label for="summary" class="block text-sm font-medium text-neutral-700 mb-2">Summary / Issue Description</label>
+                        <textarea id="summary" rows="5" required 
+                                  class="w-full px-4 sm:px-5 py-3.5 sm:py-4 border border-neutral-300 rounded-2xl focus:outline-none focus:border-[#FF4F00] focus:ring-1 focus:ring-[#FF4F00] text-base sm:text-lg placeholder-neutral-400 resize-y"
+                                  placeholder="Please describe your question or problem in detail..."></textarea>
+                    </div>
+
+                    <div class="text-center pt-4">
+                        <button type="submit"
+                                class="bg-[#FF4F00] hover:bg-orange-600 text-white px-12 sm:px-16 py-4 sm:py-5 rounded-3xl font-semibold text-lg sm:text-xl transition-all active:scale-95 shadow-md">
+                            Send Message
+                        </button>
+                    </div>
+                </form>
+
+                <p class="text-center text-xs sm:text-sm text-neutral-500 mt-8">
+                    We'll get back to you as soon as possible. For urgent help, try our 24/7 live chat in My Account.
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- FOOTER remains mostly unchanged – already quite responsive -->
+
+    <!-- PROMO MODAL (unchanged but works well on mobile) -->
+    <div id="promo-modal" class="hidden fixed inset-0 bg-black/70 flex items-center justify-center z-[999]">
+        <div class="bg-white rounded-3xl max-w-md w-full mx-4 overflow-hidden">
+            <div class="px-6 sm:px-8 pt-6 sm:pt-8 pb-4">
+                <h3 class="text-xl sm:text-2xl font-bold text-center">Apply Promo Code</h3>
+                <div class="mt-6 sm:mt-8">
+                    <input id="promo-input" type="text" placeholder="Enter code here"
+                           class="w-full border-2 border-neutral-200 focus:border-[#FF4F00] rounded-2xl px-5 sm:px-6 py-4 sm:py-5 text-base sm:text-lg outline-none">
+                </div>
+            </div>
+            <div class="bg-neutral-50 px-6 sm:px-8 py-5 sm:py-6 flex gap-x-4">
+                <button onclick="hidePromoModal()" 
+                        class="flex-1 py-4 sm:py-6 text-neutral-600 font-semibold rounded-3xl border border-neutral-200">
+                    CANCEL
+                </button>
+                <button onclick="applyPromo()" 
+                        class="flex-1 py-4 sm:py-6 bg-[#FF4F00] text-white font-semibold rounded-3xl">
+                    APPLY
+                </button>
+            </div>
+        </div>
+    </div>
+    
+  <footer class="bg-[#0A2540] text-neutral-300 pt-20 pb-12 mt-12">
+        <div class="max-w-7xl mx-auto px-6">
+            <div class="grid grid-cols-2 md:grid-cols-5 gap-y-12">
+                <!-- Products -->
+                <div>
+                    <div class="text-white font-semibold mb-6">PRODUCTS</div>
+                    <div class="space-y-3 text-sm">
+                        <a href="#" class="block hover:text-white">VirusBlocker 360 Standard</a>
+                        <a href="#" class="block hover:text-white">VirusBlocker 360 Deluxe</a>
+                        <a href="#" class="block hover:text-white">VirusBlocker 360 Premium</a>
+                        <a href="#" class="block hover:text-white">VirusBlocker AntiVirus Plus</a>
+                        <a href="#" class="block hover:text-white">VirusBlocker VPN</a>
+                    </div>
+                </div>
+                
+                <!-- Features -->
+                <div>
+                    <div class="text-white font-semibold mb-6">PRODUCT FEATURES</div>
+                    <div class="space-y-3 text-sm">
+                        <a href="#" class="block hover:text-white">Antivirus</a>
+                        <a href="#" class="block hover:text-white">AI Scam Protection</a>
+                        <a href="#" class="block hover:text-white">Dark Web Monitoring</a>
+                        <a href="#" class="block hover:text-white">Password Manager</a>
+                        <a href="#" class="block hover:text-white">Parental Control</a>
+                    </div>
+                </div>
+                
+                <!-- Company -->
+                <div>
+                    <div class="text-white font-semibold mb-6">COMPANY</div>
+                    <div class="space-y-3 text-sm">
+                        <a href="#" class="block hover:text-white">About VirusBlocker</a>
+                        <a href="#" class="block hover:text-white">Support</a>
+                        <a href="./TermsAndCondition.html" class="block hover:text-white">Terms and condition</a>
+                        <a href="Privacy.html" class="block hover:text-white">Privacy Policy</a>
+                        <a href="refund.html" class="block hover:text-white">Return and Refund Policy</a>
+                    </div>
+                </div>
+                
+                <!-- Legal -->
+                <div class="col-span-2 md:col-span-1">
+                    <div class="text-white font-semibold mb-6">LEGAL</div>
+                    <div class="text-xs leading-relaxed space-y-1">
+                        <p>VirusBlocker is part of Gen – a global company with a family of trusted brands.</p>
+                        <p class="pt-6">Copyright © 2026 Gen Digital Inc. All rights reserved.</p>
+                    </div>
+                </div>
+                
+                <!-- Social + App -->
+                <div class="col-span-2 md:col-span-1 flex flex-col items-start md:items-end gap-y-6">
+                    <div class="flex gap-x-6 text-2xl">
+                        <i class="fa-brands fa-facebook hover:text-white cursor-pointer"></i>
+                        <i class="fa-brands fa-x-twitter hover:text-white cursor-pointer"></i>
+                        <i class="fa-brands fa-youtube hover:text-white cursor-pointer"></i>
+                    </div>
+                    
+                    <div class="text-xs text-neutral-400">Download our app on</div>
+                    <div class="flex gap-x-4">
+                        <div class="bg-white/10 px-6 py-3 rounded-2xl text-xs font-medium">App Store</div>
+                        <div class="bg-white/10 px-6 py-3 rounded-2xl text-xs font-medium">Google Play</div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="border-t border-white/10 mt-20 pt-8 text-[10px] flex flex-wrap justify-between items-center text-neutral-500">
+                <div>Gen Digital Inc. trademarks and registered trademarks are property of Gen Digital Inc. or its affiliates.</div>
+                <div class="mt-4 md:mt-0">Privacy • Terms • Cookies</div>
+            </div>
+        </div>
+    </footer>
+    
+
+    <script>
+        // Mobile menu
+        const mobileBtn = document.getElementById('mobile-menu-btn');
+        const mobileMenu = document.getElementById('mobile-menu');
+        
+        function toggleMobileMenu() {
+            mobileMenu.classList.toggle('hidden');
+            mobileBtn.innerHTML = mobileMenu.classList.contains('hidden') 
+                ? '<i class="fa-solid fa-bars"></i>' 
+                : '<i class="fa-solid fa-xmark"></i>';
+        }
+        
+        mobileBtn.addEventListener('click', toggleMobileMenu);
+
+        // Pricing toggle (unchanged)
+        function togglePricing(el) {
+            document.querySelectorAll('.pricing-btn').forEach(b => b.classList.remove('active', 'bg-white', 'shadow'));
+            el.classList.add('active', 'bg-white', 'shadow');
+            
+            const p1 = document.getElementById('plan1-price');
+            const p2 = document.getElementById('plan2-price');
+            const p3 = document.getElementById('plan3-price');
+            
+            if (p1.textContent === '$1,499') {
+                p1.textContent = '$2,499'; p2.textContent = '$4,999'; p3.textContent = '$7,999';
+            } else {
+                p1.textContent = '$1,499'; p2.textContent = '$2,999'; p3.textContent = '$4,499';
+            }
+        }
+
+        // Promo modal functions (unchanged)
+        function showPromoModal() { document.getElementById('promo-modal').classList.remove('hidden'); }
+        function hidePromoModal() { document.getElementById('promo-modal').classList.add('hidden'); }
+        function applyPromo() {
+            const code = document.getElementById('promo-input').value.trim();
+            if (code.length > 2) {
+                alert(`Promo code "${code}" applied! 20% discount added (demo)`);
+                hidePromoModal();
+            } else {
+                alert("Please enter a valid promo code");
+            }
+        }
+
+        // Scroll helper
+        function scrollToSection(section) {
+            document.getElementById(section)?.scrollIntoView({ behavior: 'smooth' });
+            if (window.innerWidth < 768) toggleMobileMenu();
+        }
+
+        // Sticky header shadow
+        window.addEventListener('scroll', () => {
+            document.getElementById('header').classList.toggle('shadow-xl', window.scrollY > 80);
+        });
+
+        // Modal outside click & ESC
+        document.getElementById('promo-modal')?.addEventListener('click', e => {
+            if (e.target.id === 'promo-modal') hidePromoModal();
+        });
+        document.addEventListener('keydown', e => {
+            if (e.key === "Escape") hidePromoModal();
+        });
+
+        // Contact form demo
+        document.getElementById('contact-form')?.addEventListener('submit', e => {
+            e.preventDefault();
+            alert('Thank you! Your message has been sent. (demo)');
+            e.target.reset();
+        });
+    </script>
+</body>
+</html>

@@ -1,0 +1,310 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Antivirus Software - Terms and Conditions</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Roboto', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f5f5f5;
+            color: #333;
+        }
+
+       
+        main {
+            max-width: 1200px;
+            margin: 30px auto;
+            background-color: white;
+            padding: 30px;
+            border-radius: 8px;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+        }
+
+        h2 {
+            font-size: 1.8rem;
+            color: #1a73e8;
+            margin-bottom: 20px;
+        }
+
+        p {
+            font-size: 1.1rem;
+            line-height: 1.6;
+            margin-bottom: 20px;
+        }
+
+        ol {
+            margin-left: 20px;
+            margin-bottom: 20px;
+            font-size: 1.1rem;
+        }
+
+        ol li {
+            margin-bottom: 10px;
+        }
+
+        
+        .hero-image {
+            width: 100%;
+            height: auto;
+            border-radius: 8px;
+            margin-top: 30px;
+        }
+
+        .terms-section {
+            margin-top: 30px;
+        }
+
+        .cta {
+            background-color: #ff5733;
+            color: white;
+            padding: 15px;
+            border-radius: 5px;
+            text-align: center;
+            font-size: 1.2rem;
+            margin-top: 30px;
+        }
+
+        .cta a {
+            color: white;
+            font-weight: bold;
+            text-decoration: none;
+        }
+
+        .cta:hover {
+            background-color: #d04e2d;
+        }
+
+        .section-image {
+            width: 80%;
+            margin: 20px auto;
+            display: block;
+            border-radius: 8px;
+        }
+    </style>
+</head>
+<body>
+ <header id="header" class="VirusBlocker-header bg-white shadow-md sticky top-0 z-50">
+        <div class="max-w-7xl mx-auto px-6">
+            <div class="flex items-center justify-between h-20">
+                <!-- Logo -->
+                <div class="flex items-center gap-x-3">
+                    <div class="w-10 h-10 bg-[#FF4F00] rounded-xl flex items-center justify-center text-white font-black text-3xl leading-none pt-1">N</div>
+                    <div>
+                        <span class="font-bold text-3xl tracking-tighter text-[#0A2540]">VirusBlocker</span>
+                        <span class="text-[#FF4F00] text-xs font-bold tracking-[2px] block -mt-1">™</span>
+                    </div>
+                </div>
+
+                <!-- Desktop Menu -->
+                <nav class="hidden md:flex items-center gap-x-8 text-sm font-medium">
+                    <a href="#" onclick="scrollToSection('plans')" class="nav-link text-[#0A2540]">VirusBlocker Plans</a>
+                    <a href="#" onclick="scrollToSection('features')" class="nav-link text-[#0A2540]">Products</a>
+                    <a href="#" onclick="scrollToSection('features')" class="nav-link text-[#0A2540]">Features</a>
+                    <a href="#" class="nav-link text-[#0A2540]">Support</a>
+                    <a href="#" class="nav-link text-[#0A2540]">For Business</a>
+                </nav>
+
+                <div class="flex items-center gap-x-5">
+                    <!-- My Account -->
+                    <a href="#" class="hidden sm:flex items-center gap-x-2 text-sm font-semibold text-[#0A2540] hover:text-[#FF4F00]">
+                        <i class="fa-solid fa-circle-user text-xl"></i>
+                        <span>My Account</span>
+                    </a>
+
+                    <!-- Language -->
+                    <div class="hidden md:flex items-center gap-x-1 text-xs font-medium cursor-pointer">
+                        <span class="text-[#FF4F00]">IN</span>
+                        <i class="fa-solid fa-chevron-down text-[10px]"></i>
+                    </div>
+
+                    <!-- CTA -->
+                    <button onclick="showPromoModal()" 
+                            class="bg-[#FF4F00] hover:bg-orange-600 text-white px-8 py-3.5 rounded-2xl text-sm font-semibold flex items-center gap-x-2 transition-all active:scale-95">
+                        <i class="fa-solid fa-cart-shopping"></i>
+                        BUY NOW
+                    </button>
+
+                    <!-- Mobile Hamburger -->
+                    <button id="mobile-menu-btn"
+                            class="md:hidden text-3xl text-[#0A2540]">
+                        <i class="fa-solid fa-bars"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+
+        <!-- MOBILE MENU -->
+        <div id="mobile-menu" class="hidden md:hidden bg-white border-t shadow-xl mobile-menu">
+            <div class="px-6 py-8 flex flex-col gap-y-6 text-lg font-medium">
+                <a href="#" onclick="toggleMobileMenu()" class="nav-link">VirusBlocker Plans</a>
+                <a href="#" onclick="toggleMobileMenu()" class="nav-link">Products</a>
+                <a href="#" onclick="toggleMobileMenu()" class="nav-link">Services</a>
+                <a href="#" onclick="toggleMobileMenu()" class="nav-link">Support</a>
+                <a href="#" onclick="toggleMobileMenu()" class="nav-link">For Business</a>
+                <a href="#" onclick="toggleMobileMenu()" class="flex items-center gap-x-3 text-[#FF4F00]">
+                    <i class="fa-solid fa-circle-user"></i>
+                    <span>My Account</span>
+                </a>
+                <button onclick="toggleMobileMenu();showPromoModal()" 
+                        class="w-full bg-[#FF4F00] text-white py-5 rounded-3xl font-bold text-lg mt-4">
+                    BUY NOW
+                </button>
+            </div>
+        </div>
+    </header>
+
+<main>
+    
+    
+    <div class="terms-section">
+        <h1 class="text-center text-3xl text-semibold">Antivirus Software - Terms and Conditions</h1>
+        <h2>Introduction</h2>
+        <p>Welcome to the Antivirus Software! By using this software, you agree to the following terms and conditions. Please read these terms carefully. If you disagree with any of the terms, do not install or use the software.</p>
+
+        <h2>1. License Grant</h2>
+      
+        <p>We grant you a non-exclusive, non-transferable license to install and use the software on your device, subject to the terms set forth in this agreement. The software is licensed, not sold, to you.</p>
+
+        <h2>2. User Responsibilities</h2>
+        <ol>
+            <li>Do not reverse engineer, decompile, or attempt to discover the source code of the software.</li>
+            <li>You agree not to use the software for illegal activities or to distribute harmful malware.</li>
+            <li>Keep your account and subscription information secure and private.</li>
+        </ol>
+
+        <h2>3. Privacy Policy</h2>
+        <p>Your privacy matters to us. By using our software, you acknowledge that we may collect and process personal data as described in our <a href="#">Privacy Policy</a>.</p>
+
+        <h2>4. Software Updates</h2>
+       
+        <p>We may periodically provide software updates to improve performance, fix bugs, and enhance security. You agree to install these updates to maintain the integrity of the software.</p>
+
+        <h2>5. Limitation of Liability</h2>
+        <p>We are not liable for any direct, indirect, incidental, or consequential damages arising from the use or inability to use the software, including but not limited to loss of data, loss of business, or personal injury.</p>
+
+        <h2>6. Termination</h2>
+        <p>We may terminate your license if you violate these terms. Upon termination, you must immediately uninstall the software from all devices.</p>
+
+        <h2>7. Governing Law</h2>
+        <p>This agreement is governed by the laws of [Your Country/Region], and any disputes will be resolved in the appropriate legal jurisdiction.</p>
+
+        <h2>8. Contact Us</h2>
+        <p>If you have any questions or concerns regarding these Terms and Conditions, please contact us at <a href="mailto:support@example.com">support@example.com</a>.</p>
+
+        <div class="cta">
+            <p><strong>Ready to Protect Your Device?</strong></p>
+            <a href="#">Download Now</a>
+        </div>
+    </div>
+</main>
+
+<footer class="bg-[#0A2540] text-neutral-300 pt-20 pb-12 mt-12">
+        <div class="max-w-7xl mx-auto px-6">
+            <div class="grid grid-cols-2 md:grid-cols-5 gap-y-12">
+                <!-- Products -->
+                <div>
+                    <div class="text-white font-semibold mb-6">PRODUCTS</div>
+                    <div class="space-y-3 text-sm">
+                        <a href="#" class="block hover:text-white">VirusBlocker 360 Standard</a>
+                        <a href="#" class="block hover:text-white">VirusBlocker 360 Deluxe</a>
+                        <a href="#" class="block hover:text-white">VirusBlocker 360 Premium</a>
+                        <a href="#" class="block hover:text-white">VirusBlocker AntiVirus Plus</a>
+                        <a href="#" class="block hover:text-white">VirusBlocker VPN</a>
+                    </div>
+                </div>
+                
+                <!-- Features -->
+                <div>
+                    <div class="text-white font-semibold mb-6">PRODUCT FEATURES</div>
+                    <div class="space-y-3 text-sm">
+                        <a href="#" class="block hover:text-white">Antivirus</a>
+                        <a href="#" class="block hover:text-white">AI Scam Protection</a>
+                        <a href="#" class="block hover:text-white">Dark Web Monitoring</a>
+                        <a href="#" class="block hover:text-white">Password Manager</a>
+                        <a href="#" class="block hover:text-white">Parental Control</a>
+                    </div>
+                </div>
+                
+                <!-- Company -->
+                <div>
+                    <div class="text-white font-semibold mb-6">COMPANY</div>
+                    <div class="space-y-3 text-sm">
+                        <a href="#" class="block hover:text-white">About VirusBlocker</a>
+                        <a href="#" class="block hover:text-white">Support</a>
+                        <a href="#" class="block hover:text-white">Terms and condition</a>
+                        <a href="Privacy.html" class="block hover:text-white">Privacy Policy</a>
+                    </div>
+                </div>
+                
+                <!-- Legal -->
+                <div class="col-span-2 md:col-span-1">
+                    <div class="text-white font-semibold mb-6">LEGAL</div>
+                    <div class="text-xs leading-relaxed space-y-1">
+                        <p>VirusBlocker is part of Gen – a global company with a family of trusted brands.</p>
+                        <p class="pt-6">Copyright © 2026 Gen Digital Inc. All rights reserved.</p>
+                    </div>
+                </div>
+                
+                <!-- Social + App -->
+                <div class="col-span-2 md:col-span-1 flex flex-col items-start md:items-end gap-y-6">
+                    <div class="flex gap-x-6 text-2xl">
+                        <i class="fa-brands fa-facebook hover:text-white cursor-pointer"></i>
+                        <i class="fa-brands fa-x-twitter hover:text-white cursor-pointer"></i>
+                        <i class="fa-brands fa-youtube hover:text-white cursor-pointer"></i>
+                    </div>
+                    
+                    <div class="text-xs text-neutral-400">Download our app on</div>
+                    <div class="flex gap-x-4">
+                        <div class="bg-white/10 px-6 py-3 rounded-2xl text-xs font-medium">App Store</div>
+                        <div class="bg-white/10 px-6 py-3 rounded-2xl text-xs font-medium">Google Play</div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="border-t border-white/10 mt-20 pt-8 text-[10px] flex flex-wrap justify-between items-center text-neutral-500">
+                <div>Gen Digital Inc. trademarks and registered trademarks are property of Gen Digital Inc. or its affiliates.</div>
+                <div class="mt-4 md:mt-0">Privacy • Terms • Cookies</div>
+            </div>
+        </div>
+    </footer>
+<script>
+    function scrollToSection(section) {
+      if (section === 'plans') {
+        document.getElementById('plans').scrollIntoView({ behavior: 'smooth' })
+      } else if (section === 'features') {
+        document.getElementById('features').scrollIntoView({ behavior: 'smooth' })
+      }
+      if (window.innerWidth < 768) toggleMobileMenu()
+    }
+
+    // Sticky header effect
+    window.addEventListener('scroll', () => {
+      const header = document.getElementById('header')
+      if (window.scrollY > 80) {
+        header.classList.add('shadow-xl')
+      } else {
+        header.classList.remove('shadow-xl')
+      }
+    })
+
+    function toggleMobileMenu() {
+      const mobileMenu = document.getElementById('mobile-menu')
+      mobileMenu.classList.toggle('hidden')
+      if (!mobileMenu.classList.contains('hidden')) {
+        mobileBtn.innerHTML = `<i class="fa-solid fa-xmark"></i>`
+      } else {
+        mobileBtn.innerHTML = `<i class="fa-solid fa-bars"></i>`
+      }
+    }
+    
+    const mobileBtn = document.getElementById('mobile-menu-btn')
+    mobileBtn.addEventListener('click', toggleMobileMenu)
+  </script>
+
+</body>
+</html>

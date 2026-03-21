@@ -1,0 +1,306 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Privacy Policy – SecureX</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+
+  <script>
+    tailwind.config = {
+      darkMode: 'class',
+      theme: {
+        extend: {
+          colors: {
+            secure: {
+              primary: '#FF4F00', /* Lighter primary color */
+              primaryDark: '#be123c',
+              dark: '#111827', /* Darker background for better contrast */
+              darkLight: '#374151',
+              accent: '#3b82f6',
+              muted: '#64748b',
+              grayDark: '#1F2937', /* For dark text on light background */
+            }
+          },
+          fontFamily: {
+            sans: ['Inter', 'Arial', 'sans-serif'],
+            serif: ['Georgia', 'serif'],
+          }
+        }
+      }
+    }
+  </script>
+</head>
+<body class="bg-gray-50 dark:bg-secure-dark text-gray-900 dark:text-gray-100 min-h-screen">
+
+  <!-- Header / Navbar -->
+  <header id="header" class="VirusBlocker-header bg-white shadow-md sticky top-0 z-50">
+    <div class="max-w-7xl mx-auto px-6">
+      <div class="flex items-center justify-between h-20">
+        <!-- Logo -->
+        <div class="flex items-center gap-x-3">
+          <div class="w-10 h-10 bg-[#FF4F00] rounded-xl flex items-center justify-center text-white font-black text-3xl leading-none pt-1">N</div>
+          <div>
+            <span class="font-bold text-3xl tracking-tighter text-[#0A2540]">VirusBlocker</span>
+            <span class="text-[#FF4F00] text-xs font-bold tracking-[2px] block -mt-1">™</span>
+          </div>
+        </div>
+
+        <!-- Desktop Menu -->
+        <nav class="hidden md:flex items-center gap-x-8 text-sm font-medium">
+          <a href="#" onclick="scrollToSection('plans')" class="nav-link text-[#0A2540]">VirusBlocker Plans</a>
+          <a href="#" onclick="scrollToSection('features')" class="nav-link text-[#0A2540]">Products</a>
+          <a href="#" onclick="scrollToSection('features')" class="nav-link text-[#0A2540]">Features</a>
+          <a href="#" class="nav-link text-[#0A2540]">Support</a>
+          <a href="#" class="nav-link text-[#0A2540]">For Business</a>
+        </nav>
+
+        <div class="flex items-center gap-x-5">
+          <!-- My Account -->
+          <a href="#" class="hidden sm:flex items-center gap-x-2 text-sm font-semibold text-[#0A2540] hover:text-[#FF4F00]">
+            <i class="fa-solid fa-circle-user text-xl"></i>
+            <span>My Account</span>
+          </a>
+
+          <!-- Language -->
+          <div class="hidden md:flex items-center gap-x-1 text-xs font-medium cursor-pointer">
+            <span class="text-[#FF4F00]">IN</span>
+            <i class="fa-solid fa-chevron-down text-[10px]"></i>
+          </div>
+
+          <!-- CTA -->
+          <button onclick="showPromoModal()" class="bg-[#FF4F00] hover:bg-orange-600 text-white px-8 py-3.5 rounded-2xl text-sm font-semibold flex items-center gap-x-2 transition-all active:scale-95">
+            <i class="fa-solid fa-cart-shopping"></i>
+            BUY NOW
+          </button>
+
+          <!-- Mobile Hamburger -->
+          <button id="mobile-menu-btn" class="md:hidden text-3xl text-[#0A2540]">
+            <i class="fa-solid fa-bars"></i>
+          </button>
+        </div>
+      </div>
+    </div>
+
+    <!-- MOBILE MENU -->
+    <div id="mobile-menu" class="hidden md:hidden bg-white border-t shadow-xl mobile-menu">
+      <div class="px-6 py-8 flex flex-col gap-y-6 text-lg font-medium">
+        <a href="#" onclick="toggleMobileMenu()" class="nav-link text-secure-dark hover:text-secure-primary transition-colors">VirusBlocker Plans</a>
+        <a href="#" onclick="toggleMobileMenu()" class="nav-link text-secure-dark hover:text-secure-primary transition-colors">Products</a>
+        <a href="#" onclick="toggleMobileMenu()" class="nav-link text-secure-dark hover:text-secure-primary transition-colors">Features</a>
+        <a href="#" onclick="toggleMobileMenu()" class="nav-link text-secure-dark hover:text-secure-primary transition-colors">Support</a>
+        <a href="#" onclick="toggleMobileMenu()" class="nav-link text-secure-dark hover:text-secure-primary transition-colors">For Business</a>
+        <a href="#" onclick="toggleMobileMenu()" class="flex items-center gap-x-3 text-secure-primary hover:text-secure-accent">
+          <i class="fa-solid fa-circle-user"></i>
+          <span>My Account</span>
+        </a>
+        <button onclick="toggleMobileMenu();showPromoModal()" class="w-full bg-secure-primary text-white py-5 rounded-3xl font-bold text-lg mt-4">
+          BUY NOW
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- Main Content -->
+  <main class="max-w-7xl mx-auto px-5 sm:px-8 py-12 lg:py-20 bg-white dark:bg-gray-800 rounded-xl shadow-xl">
+    <div class="prose prose-lg dark:prose-invert max-w-none">
+      <h1 class="text-5xl font-extrabold text-secure-dark dark:text-white mb-6">
+        Privacy Policy
+      </h1>
+
+      <p class="text-lg text-secure-muted dark:text-gray-400 mb-6">
+        Last updated: March 21, 2026
+      </p>
+
+      <p class="lead text-xl text-gray-700 dark:text-gray-300 mb-6">
+        SecureX ("we", "us", or "our") is committed to protecting your privacy. This Privacy Policy explains how we collect, use, disclose, and safeguard your information when you visit our website, use our services, or interact with us.
+      </p>
+
+      <div class="mt-6">
+        <h2 class="text-3xl font-bold text-secure-dark dark:text-white mt-12 mb-6">1. Information We Collect</h2>
+        <ul class="list-disc pl-6 space-y-4">
+          <li><strong>Personal Information</strong> that you voluntarily provide (name, email address, phone number, billing information)</li>
+          <li><strong>Account Information</strong> (username, password hashes, subscription details)</li>
+          <li><strong>Payment Information</strong> (processed securely via third-party providers – we do not store full card details)</li>
+          <li><strong>Device & Usage Information</strong> (IP address, browser type, device ID, operating system, pages visited, time spent)</li>
+          <li><strong>Cookies & Similar Technologies</strong> (session cookies, analytics cookies, preference cookies)</li>
+        </ul>
+      </div>
+
+      <div class="mt-6">
+        <h2 class="text-3xl font-bold text-secure-dark dark:text-white mt-12 mb-6">2. How We Use Your Information</h2>
+        <ul class="list-disc pl-6 space-y-4">
+          <li>Provide, maintain, and improve our services</li>
+          <li>Process payments and manage subscriptions</li>
+          <li>Send important service-related communications</li>
+          <li>Detect, prevent, and respond to security incidents or abuse</li>
+          <li>Comply with legal obligations</li>
+          <li>Conduct analytics and research to enhance product features</li>
+          <li>With your consent — send marketing communications</li>
+        </ul>
+      </div>
+
+      <div class="mt-6">
+        <h2 class="text-3xl font-bold text-secure-dark dark:text-white mt-12 mb-6">3. Sharing of Information</h2>
+        <ul class="list-disc pl-6 space-y-4">
+          <li>With service providers (payment processors, cloud hosting, analytics tools) under strict confidentiality</li>
+          <li>To comply with legal requirements, court orders, or government requests</li>
+          <li>In connection with a merger, acquisition, or sale of assets</li>
+          <li>To protect the rights, property, or safety of SecureX, our users, or the public</li>
+        </ul>
+      </div>
+
+      <div class="mt-6">
+        <h2 class="text-3xl font-bold text-secure-dark dark:text-white mt-12 mb-6">4. Your Rights & Choices</h2>
+        <ul class="list-disc pl-6 space-y-4">
+          <li>Access, correct, or delete your personal information</li>
+          <li>Opt out of marketing communications</li>
+          <li>Object to or restrict certain processing</li>
+          <li>Withdraw consent where processing is based on consent</li>
+          <li>Request data portability</li>
+        </ul>
+        <p class="mt-6">
+          To exercise these rights, please contact us at <a href="mailto:privacy@securex.com" class="text-secure-primary hover:underline">privacy@securex.com</a>.
+        </p>
+      </div>
+
+      <div class="mt-6">
+        <h2 class="text-3xl font-bold text-secure-dark dark:text-white mt-12 mb-6">5. Data Security</h2>
+        <p>We implement commercially reasonable technical, administrative, and physical safeguards to protect your information. However, no method of transmission over the Internet or electronic storage is 100% secure.</p>
+      </div>
+
+      <div class="mt-6">
+        <h2 class="text-3xl font-bold text-secure-dark dark:text-white mt-12 mb-6">6. International Data Transfers</h2>
+        <p>Your information may be transferred to, stored, and processed in countries other than your own. We ensure appropriate safeguards are in place for such transfers.</p>
+      </div>
+
+      <div class="mt-6">
+        <h2 class="text-3xl font-bold text-secure-dark dark:text-white mt-12 mb-6">7. Children's Privacy</h2>
+        <p>Our services are not directed to children under 16. We do not knowingly collect personal information from children under 16. If we become aware that we have collected such information, we will take steps to delete it.</p>
+      </div>
+
+      <div class="mt-6">
+        <h2 class="text-3xl font-bold text-secure-dark dark:text-white mt-12 mb-6">8. Changes to This Privacy Policy</h2>
+        <p>We may update this policy from time to time. We will notify you of material changes by posting the new policy on this page and updating the "Last updated" date.</p>
+      </div>
+
+      <div class="mt-6">
+        <h2 class="text-3xl font-bold text-secure-dark dark:text-white mt-12 mb-6">9. Contact Us</h2>
+        <p>If you have any questions about this Privacy Policy, please contact us at:</p>
+
+        <div class="mt-6 p-6 bg-gray-100 dark:bg-secure-dark rounded-xl border border-gray-200 dark:border-gray-700">
+          <p class="font-medium">Email: <a href="mailto:privacy@securex.com" class="text-secure-primary hover:underline">privacy@securex.com</a></p>
+          <p class="mt-2">SecureX Technologies Pvt. Ltd.<br>Gurugram, Haryana, India</p>
+        </div>
+      </div>
+    </div>
+  </main>
+  <footer class="bg-[#0A2540] text-neutral-300 pt-20 pb-12 mt-12">
+        <div class="max-w-7xl mx-auto px-6">
+            <div class="grid grid-cols-2 md:grid-cols-5 gap-y-12">
+                <!-- Products -->
+                <div>
+                    <div class="text-white font-semibold mb-6">PRODUCTS</div>
+                    <div class="space-y-3 text-sm">
+                        <a href="#" class="block hover:text-white">VirusBlocker 360 Standard</a>
+                        <a href="#" class="block hover:text-white">VirusBlocker 360 Deluxe</a>
+                        <a href="#" class="block hover:text-white">VirusBlocker 360 Premium</a>
+                        <a href="#" class="block hover:text-white">VirusBlocker AntiVirus Plus</a>
+                        <a href="#" class="block hover:text-white">VirusBlocker VPN</a>
+                    </div>
+                </div>
+                
+                <!-- Features -->
+                <div>
+                    <div class="text-white font-semibold mb-6">PRODUCT FEATURES</div>
+                    <div class="space-y-3 text-sm">
+                        <a href="#" class="block hover:text-white">Antivirus</a>
+                        <a href="#" class="block hover:text-white">AI Scam Protection</a>
+                        <a href="#" class="block hover:text-white">Dark Web Monitoring</a>
+                        <a href="#" class="block hover:text-white">Password Manager</a>
+                        <a href="#" class="block hover:text-white">Parental Control</a>
+                    </div>
+                </div>
+                
+                <!-- Company -->
+                <div>
+                    <div class="text-white font-semibold mb-6">COMPANY</div>
+                    <div class="space-y-3 text-sm">
+                        <a href="#" class="block hover:text-white">About VirusBlocker</a>
+                        <a href="#" class="block hover:text-white">Support</a>
+                        <a href="#" class="block hover:text-white">Terms and condition</a>
+                        <a href="Privacy.html" class="block hover:text-white">Privacy Policy</a>
+                    </div>
+                </div>
+                
+                <!-- Legal -->
+                <div class="col-span-2 md:col-span-1">
+                    <div class="text-white font-semibold mb-6">LEGAL</div>
+                    <div class="text-xs leading-relaxed space-y-1">
+                        <p>VirusBlocker is part of Gen – a global company with a family of trusted brands.</p>
+                        <p class="pt-6">Copyright © 2026 Gen Digital Inc. All rights reserved.</p>
+                    </div>
+                </div>
+                
+                <!-- Social + App -->
+                <div class="col-span-2 md:col-span-1 flex flex-col items-start md:items-end gap-y-6">
+                    <div class="flex gap-x-6 text-2xl">
+                        <i class="fa-brands fa-facebook hover:text-white cursor-pointer"></i>
+                        <i class="fa-brands fa-x-twitter hover:text-white cursor-pointer"></i>
+                        <i class="fa-brands fa-youtube hover:text-white cursor-pointer"></i>
+                    </div>
+                    
+                    <div class="text-xs text-neutral-400">Download our app on</div>
+                    <div class="flex gap-x-4">
+                        <div class="bg-white/10 px-6 py-3 rounded-2xl text-xs font-medium">App Store</div>
+                        <div class="bg-white/10 px-6 py-3 rounded-2xl text-xs font-medium">Google Play</div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="border-t border-white/10 mt-20 pt-8 text-[10px] flex flex-wrap justify-between items-center text-neutral-500">
+                <div>Gen Digital Inc. trademarks and registered trademarks are property of Gen Digital Inc. or its affiliates.</div>
+                <div class="mt-4 md:mt-0">Privacy • Terms • Cookies</div>
+            </div>
+        </div>
+    </footer>
+
+  <!-- Footer -->
+ 
+
+  <script>
+    function scrollToSection(section) {
+      if (section === 'plans') {
+        document.getElementById('plans').scrollIntoView({ behavior: 'smooth' })
+      } else if (section === 'features') {
+        document.getElementById('features').scrollIntoView({ behavior: 'smooth' })
+      }
+      if (window.innerWidth < 768) toggleMobileMenu()
+    }
+
+    // Sticky header effect
+    window.addEventListener('scroll', () => {
+      const header = document.getElementById('header')
+      if (window.scrollY > 80) {
+        header.classList.add('shadow-xl')
+      } else {
+        header.classList.remove('shadow-xl')
+      }
+    })
+
+    function toggleMobileMenu() {
+      const mobileMenu = document.getElementById('mobile-menu')
+      mobileMenu.classList.toggle('hidden')
+      if (!mobileMenu.classList.contains('hidden')) {
+        mobileBtn.innerHTML = `<i class="fa-solid fa-xmark"></i>`
+      } else {
+        mobileBtn.innerHTML = `<i class="fa-solid fa-bars"></i>`
+      }
+    }
+    
+    const mobileBtn = document.getElementById('mobile-menu-btn')
+    mobileBtn.addEventListener('click', toggleMobileMenu)
+  </script>
+</body>
+</html>

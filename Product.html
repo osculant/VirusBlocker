@@ -155,110 +155,130 @@
       </div>
     </div>
   </section>
-  <section id="plans" class="py-24 bg-white">
-        <div class="max-w-7xl mx-auto px-6">
-            <div class="text-center mb-16">
-                <div class="inline-flex items-center gap-x-2 bg-orange-100 text-[#FF4F00] px-6 py-2 rounded-3xl text-sm font-semibold mb-4">
+    <section id="plans" class="py-16 sm:py-24 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6">
+            <div class="text-center mb-12 sm:mb-16">
+                <div class="inline-flex items-center gap-x-2 bg-red-100 text-[#E30613] px-5 sm:px-6 py-2 rounded-3xl text-xs sm:text-sm font-semibold mb-4">
                     <i class="fa-solid fa-fire"></i>
-                    LIMITED TIME OFFER
+                    LIMITED TIME OFFER - SAVE UP TO 60%
                 </div>
-                <h2 class="text-5xl font-bold text-[#0A2540]">Choose Your VirusBlocker Plan</h2>
-                <p class="text-xl text-neutral-600 mt-4 max-w-md mx-auto">Protection for every device. One subscription. Total peace of mind.</p>
+                <h2 class="text-4xl sm:text-5xl font-bold text-[#0A2540]">Choose Your McAfee Plan</h2>
+                <p class="text-lg sm:text-xl text-neutral-600 mt-4 max-w-md mx-auto">Complete protection for your devices and family with McAfee Total Protection.</p>
             </div>
             
             <!-- Yearly / Monthly Toggle -->
-            <div class="flex justify-center mb-12">
+            <div class="flex justify-center mb-10 sm:mb-12">
                 <div onclick="togglePricing(this)" id="pricing-toggle"
                      class="inline-flex bg-neutral-100 rounded-3xl p-1 cursor-pointer">
-                    <div class="pricing-btn active px-8 py-3 rounded-3xl text-sm font-semibold">1 Year</div>
-                    <div class="pricing-btn px-8 py-3 rounded-3xl text-sm font-semibold">2 Years - Save 50%</div>
+                    <div class="pricing-btn active px-6 sm:px-8 py-2.5 sm:py-3 rounded-3xl text-xs sm:text-sm font-semibold">1 Year</div>
+                    <div class="pricing-btn px-6 sm:px-8 py-2.5 sm:py-3 rounded-3xl text-xs sm:text-sm font-semibold">2 Years - Save 50%</div>
                 </div>
             </div>
             
-            <div class="grid md:grid-cols-3 gap-8">
-                <!-- Plan 1 -->
-                <div class="plan-card bg-white border border-neutral-200 rounded-3xl p-8 flex flex-col">
-                    <div class="flex justify-between items-start">
-                        <div>
-                            <div class="text-sm font-medium text-neutral-500">1 Device</div>
-                            <div class="text-3xl font-bold text-[#0A2540] mt-1">VirusBlocker 360 Standard</div>
-                        </div>
-                        <div class="text-right">
-                            <div class="text-xs text-neutral-400">Starting at</div>
-                            <div class="text-5xl font-bold text-[#FF4F00]" id="plan1-price">$1,499</div>
-                            <div class="text-xs text-neutral-500">/year</div>
-                        </div>
+            <div class="grid sm:grid-cols-2 md:grid-cols-3 gap-6 sm:gap-8">
+
+                <!-- Plan 1: McAfee+ Essential (5 Devices) -->
+                <div class="plan-card bg-white border border-neutral-200 rounded-3xl overflow-hidden shadow-xl flex flex-col">
+                    <!-- Image -->
+                    <div class="h-56 bg-white flex items-center justify-center p-6 border-b">
+                        <img src="McAfee_Essential.webp" 
+                             alt="McAfee+ Essential" 
+                             class="max-h-full w-auto object-contain transition-transform group-hover:scale-105">
                     </div>
                     
-                    <ul class="mt-8 space-y-4 text-sm flex-1">
-                        <li class="flex items-start gap-x-3"><i class="fa-solid fa-check text-[#FF4F00] mt-1"></i> Antivirus + Anti-Malware</li>
-                        <li class="flex items-start gap-x-3"><i class="fa-solid fa-check text-[#FF4F00] mt-1"></i> Scam Protection</li>
-                        <li class="flex items-start gap-x-3"><i class="fa-solid fa-check text-[#FF4F00] mt-1"></i> 10 GB Cloud Backup</li>
-                        <li class="flex items-start gap-x-3"><i class="fa-solid fa-check text-[#FF4F00] mt-1"></i> Password Manager</li>
-                    </ul>
-                    
-                    <button onclick="alert('Redirecting to checkout... (demo)')" 
-                            class="mt-auto w-full bg-neutral-900 hover:bg-black text-white py-6 rounded-3xl font-semibold text-lg">
-                        Get Standard
-                    </button>
+                    <div class="p-8 flex-1 flex flex-col">
+                        <div class="flex justify-between items-start">
+                            <div>
+                                <div class="text-xs sm:text-sm font-medium text-neutral-500">5 Devices</div>
+                                <div class="text-2xl sm:text-3xl font-bold text-[#0A2540] mt-1">McAfee+™ Essential</div>
+                            </div>
+                            <div class="text-right">
+                                <div class="text-xs text-neutral-400">Starting at</div>
+                                <div class="text-4xl sm:text-5xl font-bold text-[#E30613]" id="plan1-price">$35</div>
+                                <div class="text-xs text-neutral-500">/year</div>
+                            </div>
+                        </div>
+                        
+                        <ul class="mt-8 space-y-3 sm:space-y-4 text-sm sm:text-base flex-1">
+                            <li class="flex items-start gap-x-3"><i class="fa-solid fa-check text-[#E30613] mt-1"></i> Real-time Antivirus</li>
+                            <li class="flex items-start gap-x-3"><i class="fa-solid fa-check text-[#E30613] mt-1"></i> Malware & Ransomware Protection</li>
+                            <li class="flex items-start gap-x-3"><i class="fa-solid fa-check text-[#E30613] mt-1"></i> Web & Phishing Protection</li>
+                            <li class="flex items-start gap-x-3"><i class="fa-solid fa-check text-[#E30613] mt-1"></i> Password Manager</li>
+                            <li class="flex items-start gap-x-3"><i class="fa-solid fa-check text-[#E30613] mt-1"></i> 5 Device Support</li>
+                        </ul>
+                       
+                    </div>
                 </div>
-                
-                <!-- BEST DEAL -->
-                <div class="plan-card best-deal bg-white border-2 border-[#FF4F00] rounded-3xl p-8 flex flex-col relative scale-105 shadow-2xl">
-                    <div class="text-center">
-                        <div class="text-sm font-medium text-[#FF4F00]">3 Devices</div>
-                        <div class="text-3xl font-bold text-[#0A2540]">VirusBlocker 360 Deluxe</div>
+
+                <!-- BEST DEAL - McAfee+ Premium Individual -->
+                <div class="plan-card best-deal bg-white border-2 border-[#E30613] rounded-3xl overflow-hidden shadow-2xl flex flex-col relative scale-100 sm:scale-105">
+                    <!-- Image -->
+                    <div class="h-56 bg-white flex items-center justify-center p-6 border-b">
+                        <img src="51SDRZlGPkL.jpg_BO30,255,255,255_UF750,750_SR1910,1000,0,C_QL100_.jpg" 
+                             alt="McAfee+ Premium" 
+                             class="max-h-full w-auto object-contain transition-transform group-hover:scale-105">
                     </div>
                     
-                    <div class="text-center mt-8">
-                        <div class="text-xs text-neutral-400">Most Popular</div>
-                        <div class="text-6xl font-bold text-[#FF4F00]" id="plan2-price">$2,999</div>
-                        <div class="text-xs text-neutral-500">/year • Save $1,500</div>
+                    <div class="p-8 flex-1 flex flex-col">
+                        <div class="text-center">
+                            <div class="text-xs sm:text-sm font-medium text-[#E30613]">Unlimited Devices</div>
+                            <div class="text-2xl sm:text-3xl font-bold text-[#0A2540] mt-1">McAfee+™ Premium Individual</div>
+                        </div>
+                        
+                        <div class="text-center mt-8">
+                            <div class="text-xs text-neutral-400">Most Popular</div>
+                            <div class="text-5xl sm:text-6xl font-bold text-[#E30613]" id="plan2-price">$45</div>
+                            <div class="text-xs text-neutral-500">/year • Save $1,500</div>
+                        </div>
+                        
+                        <ul class="mt-8 space-y-3 sm:space-y-4 text-sm sm:text-base flex-1">
+                            <li class="flex items-start gap-x-3"><i class="fa-solid fa-check text-[#E30613] mt-1"></i> All Essential features</li>
+                            <li class="flex items-start gap-x-3"><i class="fa-solid fa-check text-[#E30613] mt-1"></i> Unlimited Secure VPN</li>
+                            <li class="flex items-start gap-x-3"><i class="fa-solid fa-check text-[#E30613] mt-1"></i> Advanced Password Manager</li>
+                            <li class="flex items-start gap-x-3"><i class="fa-solid fa-check text-[#E30613] mt-1"></i> Identity Theft Protection</li>
+                            <li class="flex items-start gap-x-3"><i class="fa-solid fa-check text-[#E30613] mt-1"></i> Parental Controls</li>
+                        </ul>
+                       
                     </div>
-                    
-                    <ul class="mt-8 space-y-4 text-sm flex-1">
-                        <li class="flex items-start gap-x-3"><i class="fa-solid fa-check text-[#FF4F00] mt-1"></i> Antivirus, Malware &amp; Ransomware</li>
-                        <li class="flex items-start gap-x-3"><i class="fa-solid fa-check text-[#FF4F00] mt-1"></i> Unlimited VPN</li>
-                        <li class="flex items-start gap-x-3"><i class="fa-solid fa-check text-[#FF4F00] mt-1"></i> Dark Web Monitoring</li>
-                        <li class="flex items-start gap-x-3"><i class="fa-solid fa-check text-[#FF4F00] mt-1"></i> Parental Controls</li>
-                        <li class="flex items-start gap-x-3"><i class="fa-solid fa-check text-[#FF4F00] mt-1"></i> Deepfake Protection</li>
-                    </ul>
-                    
-                    <button onclick="alert('Redirecting to checkout... (demo)')" 
-                            class="mt-auto w-full bg-[#FF4F00] hover:bg-orange-600 text-white py-6 rounded-3xl font-semibold text-lg">
-                        Get Best Deal
-                    </button>
                 </div>
-                
-                <!-- Plan 3 -->
-                <div class="plan-card bg-white border border-neutral-200 rounded-3xl p-8 flex flex-col">
-                    <div class="flex justify-between items-start">
-                        <div>
-                            <div class="text-sm font-medium text-neutral-500">5+ Devices</div>
-                            <div class="text-3xl font-bold text-[#0A2540] mt-1">VirusBlocker 360 Premium</div>
-                        </div>
-                        <div class="text-right">
-                            <div class="text-xs text-neutral-400">Starting at</div>
-                            <div class="text-5xl font-bold text-[#FF4F00]" id="plan3-price">$4,499</div>
-                            <div class="text-xs text-neutral-500">/year</div>
-                        </div>
+
+                <!-- Plan 3: McAfee+ Advanced Individual -->
+                <div class="plan-card bg-white border border-neutral-200 rounded-3xl overflow-hidden shadow-xl flex flex-col">
+                    <!-- Image -->
+                    <div class="h-56 bg-white flex items-center justify-center p-6 border-b">
+                        <img src="51wkFGfTCJL.jpg_BO30,255,255,255_UF750,750_SR1910,1000,0,C_QL100_.jpg" 
+                             alt="McAfee+ Advanced" 
+                             class="max-h-full w-auto object-contain transition-transform group-hover:scale-105">
                     </div>
                     
-                    <ul class="mt-8 space-y-4 text-sm flex-1">
-                        <li class="flex items-start gap-x-3"><i class="fa-solid fa-check text-[#FF4F00] mt-1"></i> Everything in Deluxe +</li>
-                        <li class="flex items-start gap-x-3"><i class="fa-solid fa-check text-[#FF4F00] mt-1"></i> 50 GB Cloud Backup</li>
-                        <li class="flex items-start gap-x-3"><i class="fa-solid fa-check text-[#FF4F00] mt-1"></i> VirusBlocker Family Parental Control</li>
-                        <li class="flex items-start gap-x-3"><i class="fa-solid fa-check text-[#FF4F00] mt-1"></i> Priority Support</li>
-                    </ul>
-                    
-                    <button onclick="alert('Redirecting to checkout... (demo)')" 
-                            class="mt-auto w-full bg-neutral-900 hover:bg-black text-white py-6 rounded-3xl font-semibold text-lg">
-                        Get Premium
-                    </button>
+                    <div class="p-8 flex-1 flex flex-col">
+                        <div class="flex justify-between items-start">
+                            <div>
+                                <div class="text-xs sm:text-sm font-medium text-neutral-500">Unlimited Devices</div>
+                                <div class="text-2xl sm:text-3xl font-bold text-[#0A2540] mt-1">McAfee+™ Advanced Individual</div>
+                            </div>
+                            <div class="text-right">
+                                <div class="text-xs text-neutral-400">Starting at</div>
+                                <div class="text-4xl sm:text-5xl font-bold text-[#E30613]" id="plan3-price">$85</div>
+                                <div class="text-xs text-neutral-500">/year</div>
+                            </div>
+                        </div>
+                        
+                        <ul class="mt-8 space-y-3 sm:space-y-4 text-sm sm:text-base flex-1">
+                            <li class="flex items-start gap-x-3"><i class="fa-solid fa-check text-[#E30613] mt-1"></i> Everything in Premium +</li>
+                            <li class="flex items-start gap-x-3"><i class="fa-solid fa-check text-[#E30613] mt-1"></i> Advanced Firewall</li>
+                            <li class="flex items-start gap-x-3"><i class="fa-solid fa-check text-[#E30613] mt-1"></i> 50 GB Cloud Backup</li>
+                            <li class="flex items-start gap-x-3"><i class="fa-solid fa-check text-[#E30613] mt-1"></i> Priority Support</li>
+                            <li class="flex items-start gap-x-3"><i class="fa-solid fa-check text-[#E30613] mt-1"></i> Full Family & Identity Protection</li>
+                        </ul>
+                        
+                    </div>
                 </div>
             </div>
             
-            <div class="text-center text-xs text-neutral-400 mt-8">* Prices shown are for 1-year subscription. Auto-renews. Cancel anytime.</div>
+            <div class="text-center text-xs text-neutral-400 mt-8">
+                * Prices shown are for 1-year subscription. Auto-renews. Cancel anytime. 30-day money-back guarantee.
+            </div>
         </div>
     </section>
 
